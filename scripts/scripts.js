@@ -40,21 +40,3 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 })
-// время / часики
-function updateTimes() {
-  const now = new Date()
-  const nyOffset = -5 * 60 + now.getTimezoneOffset()
-  const nyDate = new Date(now.getTime() + nyOffset * 60 * 1000)
-  document.getElementById('ny-time').innerText = nyDate.toLocaleString([], {
-    timeStyle: 'medium'
-  })
-
-  const mskOffset = 3 * 60 + now.getTimezoneOffset()
-  const mskDate = new Date(now.getTime() + mskOffset * 60 * 1000)
-  document.getElementById('msk-time').innerText = mskDate.toLocaleString([], {
-    timeStyle: 'medium'
-  })
-}
-
-setInterval(updateTimes, 500)
-updateTimes()
