@@ -1,0 +1,288 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family:
+    Instrumental Sans,
+    sans-serif;
+  background-color: black;
+}
+.fade-out {
+  opacity: 0;
+  background: #000000;
+  transition: opacity 0.8s ease;
+}
+#bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.l {
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+.a {
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+.n {
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+.g {
+  top: 50%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+}
+
+.top-right {
+  top: 0;
+  left: 100vw;
+  transform: translate(-100%, 0);
+}
+
+.bottom-left {
+  top: 103vh;
+  left: 0;
+  transform: translate(0, -100%);
+}
+
+.bottom-right {
+  top: 103vh;
+  left: 100vw;
+  transform: translate(-100%, -100%);
+}
+
+.letter {
+  position: absolute;
+  font-size: 1500%;
+  color: white;
+  z-index: 10;
+  transition: all 2s ease-in-out;
+  font-family: 'JustCosmic', sans-serif;
+  padding: 1.2%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black !important;
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+.center-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  z-index: 2;
+  color: white;
+}
+
+.center-container.visible {
+  opacity: 1;
+}
+
+.times {
+  font-size: 1.8vh;
+  line-height: 0.6vw;
+}
+.time-ny,
+.time-msk {
+  margin-bottom: 0.5rem;
+}
+
+.main-text {
+  text-align: center;
+  font-size: 1.8vh;
+  line-height: 50%;
+}
+.main-text p {
+  margin: 0.5rem 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 50%;
+}
+nav ul li {
+  margin-bottom: 1vw;
+  position: relative;
+}
+nav ul li::before {
+  content: '→';
+  position: absolute;
+  left: -40%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+nav ul li:hover::before {
+  opacity: 1;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8vh;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  padding: 1vw 0;
+}
+
+.text {
+  position: relative;
+  width: max-content;
+  height: auto;
+  padding: 1vw;
+  z-index: 1;
+}
+
+.text p {
+  position: relative;
+  font-size: 1.8vh;
+}
+
+.text-revealer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.text-revealer:after {
+  content: '';
+  position: absolute;
+  top: 1.5vw;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+}
+
+.gallery {
+  width: 100%;
+  height: calc(100vh - 5vw);
+  position: relative;
+  padding: 1vw 0;
+}
+
+.image {
+  width: 15%;
+  overflow: hidden;
+  position: absolute;
+  margin: 1.5vw;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .text p {
+    font-size: 3vw;
+  }
+  .image {
+    width: 20%;
+    margin: 1vw;
+  }
+  .header {
+    top: 15%;
+  }
+  .gallery {
+    height: calc(100vh - 10vw);
+  }
+  .letter {
+    font-size: 700%;
+  }
+  .center-container {
+    height: 50%;
+  }
+  .times {
+    opacity: 0;
+  }
+  .main-text {
+    opacity: 0;
+  }
+  nav ul {
+    position: absolute;
+    font-size: 1.8vh;
+    line-height: 100%;
+    text-align: center;
+    padding: 0%;
+    left: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .text p {
+    font-size: 4vw;
+  }
+  .image {
+    width: 25%;
+    margin: 0.5vw;
+  }
+  .header {
+    top: 10%;
+  }
+  .gallery {
+    height: calc(100vh - 15vw);
+  }
+}
+body.gallery_block {
+  background-color: #000000;
+  will-change: transform;
+  transition: transform 0.1s ease;
+}
+.gallery {
+  position: relative;
+  width: 100%;
+}
