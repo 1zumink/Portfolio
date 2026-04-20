@@ -8,11 +8,11 @@ html {
   font-family:
     Instrumental Sans,
     sans-serif;
-  background-color: black;
+  background-color: #121212;
 }
 .fade-out {
   opacity: 0;
-  background: #000000;
+  background: #121212;
   transition: opacity 0.8s ease;
 }
 #bg-video {
@@ -90,7 +90,7 @@ html {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: black !important;
+  background-color: #121212 !important;
   opacity: 1;
   z-index: 1;
   transition: opacity 2s ease-in-out;
@@ -114,15 +114,6 @@ html {
 
 .center-container.visible {
   opacity: 1;
-}
-
-.times {
-  font-size: 1.8vh;
-  line-height: 0.6vw;
-}
-.time-ny,
-.time-msk {
-  margin-bottom: 0.5rem;
 }
 
 .quote {
@@ -149,19 +140,25 @@ nav ul li {
   margin-bottom: 1vw;
   position: relative;
 }
-nav ul li::before {
+/* nav ul li::before {
   content: '→';
   position: absolute;
   left: -40%;
   opacity: 0;
   transition: opacity 0.3s;
+  font-size: 2.5vh;
 }
 nav ul li:hover::before {
   opacity: 1;
-}
+} */
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-size: 1.8vh;
+}
+nav ul li a:hover {
+  color: white;
+  text-decoration: underline;
   font-size: 1.8vh;
 }
 
