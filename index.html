@@ -1,48 +1,62 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Илья Ланг</title>
-
+    <title>Илья Ланг — персональная экосистема</title>
     <link rel="stylesheet" href="stylesheets/reset.css" />
+    <link rel="stylesheet" href="stylesheets/system.css" />
     <link rel="stylesheet" href="stylesheets/preview.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
   </head>
-  <body>
-    <div class="page-content">
-      <video autoplay muted playsinline loop id="bg-video">
+  <body class="home-page">
+    <main class="home-stage">
+      <video
+        autoplay
+        muted
+        playsinline
+        loop
+        id="bg-video"
+        aria-label="Абстрактный видеофон"
+      >
         <source src="cover.mp4" type="video/mp4" />
-        Ваш браузер не поддерживает видео.
       </video>
+
+      <div class="video-shade"></div>
       <div class="overlay"></div>
+
       <div class="letter l">L</div>
       <div class="letter a">A</div>
       <div class="letter n">N</div>
       <div class="letter g">G</div>
-      <div class="center-container hidden">
-        <nav class="about">
-          <ul>
-            <li><a href="" class="link-transition">ABOUT ME</a></li>
-          </ul>
-        </nav>
-        <div class="quote">
-          <p>GOOD DESIGN IS GOOD BUISINESS.</p>
+
+      <section
+        class="home-core hidden"
+        aria-label="Навигация экосистемы Ильи Ланга"
+      >
+        <div class="home-meta">
+          <a class="home-mark link-transition" href="index.html">LANG</a>
+          <p>personal brand ecosystem</p>
         </div>
-        <nav>
-          <ul>
-            <li>
-              <a href="portfolio.html" class="link-transition">PORTFOLIO</a>
-            </li>
-            <li><a href="" class="link-transition">SHOP</a></li>
-            <li><a href="" class="link-transition">FREELANCE</a></li>
-          </ul>
+
+        <div class="home-message">
+          <p class="home-kicker">design / custom / freelance</p>
+          <h1>Good design is good business.</h1>
+          <p>
+            Я собираю визуальные системы, кастомные вещи и медиа-образы, которые
+            помогают брендам выглядеть точнее, смелее и дороже.
+          </p>
+        </div>
+
+        <nav class="home-nav" aria-label="Главная навигация">
+          <a href="portfolio.html" class="link-transition">Portfolio</a>
+          <a href="cv.html" class="link-transition">CV</a>
+          <a href="about.html" class="link-transition">About</a>
+          <a href="shop.html" class="link-transition">Shop</a>
+          <a href="freelance.html" class="link-transition">Freelance</a>
         </nav>
-      </div>
-    </div>
+      </section>
+    </main>
+
     <script src="./scripts/scripts.js"></script>
     <script src="./scripts/transition.js"></script>
   </body>

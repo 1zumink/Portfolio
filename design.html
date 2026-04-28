@@ -1,87 +1,117 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DESIGN</title>
-
+    <title>Design cases — Илья Ланг</title>
     <link rel="stylesheet" href="stylesheets/reset.css" />
+    <link rel="stylesheet" href="stylesheets/system.css" />
     <link rel="stylesheet" href="stylesheets/portfolio.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <section class="topper">
-      <div class="topper-inner">
-        <a href="index.html">MAIN</a>
-        <a href="">ABOUT ME</a>
-        <a href="">SHOP</a>
-        <a href="">FREELANCE</a>
-      </div>
-    </section>
-    <section class="projects">
-      <div class="projects-inner">
-        <p class="theme_big">DESIGN</p>
-        <div class="projects-grid">
-          <a href="project1.html" class="project-card">
-            <div class="project-img"></div>
-            <div class="project-info">
-              <h3>Project name</h3>
-              <p class="date">mm.yy–mm.yy.</p>
-              <p>Описание проекта описание проекта описание проекта</p>
-            </div>
-          </a>
-          <a href="project1.html" class="project-card">
-            <div class="project-img"></div>
-            <div class="project-info">
-              <h3>Project name</h3>
-              <p class="date">mm.yy–mm.yy.</p>
-              <p>Описание проекта описание проекта описание проекта</p>
-            </div>
-          </a>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a class="brand-link link-transition" href="index.html">
+          <span class="brand-mark">L</span>
+          Илья Ланг
+        </a>
+        <div class="nav-links">
+          <a class="is-active" href="portfolio.html">Portfolio</a>
+          <a href="cv.html">CV</a>
+          <a href="about.html">About</a>
+          <a href="shop.html">Shop</a>
+          <a href="freelance.html">Freelance</a>
         </div>
-        <div class="projects-grid">
-          <a href="project1.html" class="project-card">
-            <div class="project-img"></div>
-            <div class="project-info">
-              <h3>Project name</h3>
-              <p class="date">mm.yy–mm.yy.</p>
-              <p>Описание проекта описание проекта описание проекта</p>
-            </div>
-          </a>
-          <a href="project1.html" class="project-card">
-            <div class="project-img"></div>
-            <div class="project-info">
-              <h3>Project name</h3>
-              <p class="date">mm.yy–mm.yy.</p>
-              <p>Описание проекта описание проекта описание проекта</p>
-            </div>
-          </a>
-        </div>
-        <div class="projects-grid">
-          <a href="project1.html" class="project-card">
-            <div class="project-img"></div>
-            <div class="project-info">
-              <h3>Project name</h3>
-              <p class="date">mm.yy–mm.yy.</p>
-              <p>Описание проекта описание проекта описание проекта</p>
-            </div>
-          </a>
-          <a href="project1.html" class="project-card">
-            <div class="project-img"></div>
-            <div class="project-info">
-              <h3>Project name</h3>
-              <p class="date">mm.yy–mm.yy.</p>
-              <p>Описание проекта описание проекта описание проекта</p>
-            </div>
-          </a>
-        </div>
+      </nav>
+    </header>
 
-        <div><a class="back" href="portfolio.html">BACK TO PORTFOLIO</a></div>
+    <main>
+      <section class="page-section hero-section">
+        <div class="page-shell">
+          <p class="page-kicker">portfolio / multidisciplinary design</p>
+          <h1 class="page-title">Design <span>cases</span></h1>
+          <p class="lead">
+            Дизайн здесь не отделен от образа, продукта и бизнеса. Это подборка
+            кейсов про визуальный язык, айдентику, кампейны и интерфейсное
+            мышление.
+          </p>
+          <div class="button-row">
+            <a class="button" href="case-gorki.html">Открыть Gorki</a>
+            <a class="button secondary" href="portfolio.html"
+              >Все направления</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="page-shell">
+          <div class="projects-grid">
+            <a class="project-card surface" href="case-gorki.html">
+              <img
+                src="images/projects/gorki/cover.jpg"
+                alt="Обложка проекта Gorki"
+              />
+              <div class="project-info">
+                <p class="page-kicker">01 / visual identity</p>
+                <h2>Gorki</h2>
+                <p class="date">archive case</p>
+                <p>
+                  Визуальная система с темной атмосферой, жесткой типографикой и
+                  контрастным графическим направлением.
+                </p>
+                <div class="tag-list">
+                  <span class="tag">identity</span>
+                  <span class="tag">art direction</span>
+                  <span class="tag">layout</span>
+                </div>
+              </div>
+            </a>
+
+            <article class="project-card surface is-locked">
+              <div class="project-placeholder">02</div>
+              <div class="project-info">
+                <p class="page-kicker">poster / campaign</p>
+                <h2>Noise Studies</h2>
+                <p class="date">coming soon</p>
+                <p>
+                  Серия постеров и визуальных носителей для музыкального события
+                  с акцентом на шум, ритм и цифровое напряжение.
+                </p>
+                <div class="tag-list">
+                  <span class="tag">poster</span>
+                  <span class="tag">campaign</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card surface is-locked">
+              <div class="project-placeholder">03</div>
+              <div class="project-info">
+                <p class="page-kicker">digital / interface</p>
+                <h2>Brand Terminal</h2>
+                <p class="date">coming soon</p>
+                <p>
+                  Экранная система для персонального бренда: структура,
+                  навигация, визуальные модули и презентационные страницы.
+                </p>
+                <div class="tag-list">
+                  <span class="tag">web</span>
+                  <span class="tag">ui</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="chip-link" href="portfolio.html">Назад к портфолио</a>
+        <a class="chip-link" href="freelance.html">Заказать похожий проект</a>
       </div>
-    </section>
+    </footer>
 
     <script src="./scripts/transition.js"></script>
   </body>

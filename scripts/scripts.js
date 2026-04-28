@@ -1,42 +1,25 @@
-// букавки по бокам экрана
-document.addEventListener('DOMContentLoaded', function () {
-  let l = document.querySelector('.l')
-  let a = document.querySelector('.a')
-  let n = document.querySelector('.n')
-  let g = document.querySelector('.g')
-  let overlay = document.querySelector('.overlay')
-  const centerContainer = document.querySelector('.center-container')
-  const bgVideo = document.getElementById('bg-video')
+document.addEventListener("DOMContentLoaded", function () {
+  const letters = document.querySelectorAll(".letter");
+  const overlay = document.querySelector(".overlay");
+  const homeCore = document.querySelector(".home-core");
+
+  if (!letters.length || !overlay || !homeCore) {
+    return;
+  }
 
   setTimeout(function () {
-    l.classList.add('top-left')
-    a.classList.add('top-right')
-    n.classList.add('bottom-left')
-    g.classList.add('bottom-right')
-    overlay.style.opacity = '0'
-  }, 1000)
+    document.querySelector(".l")?.classList.add("top-left");
+    document.querySelector(".a")?.classList.add("top-right");
+    document.querySelector(".n")?.classList.add("bottom-left");
+    document.querySelector(".g")?.classList.add("bottom-right");
+    overlay.style.opacity = "0";
+  }, 700);
 
-  setTimeout(() => {
-    centerContainer.classList.add('visible')
-    bgVideo.style.opacity = '1'
-  }, 2200)
+  setTimeout(function () {
+    homeCore.classList.add("visible");
+  }, 1700);
 
-  overlay.addEventListener('transitionend', function () {
-    overlay.style.display = 'none'
-  })
-  const newsButton = document.getElementById('news-button')
-  if (newsButton) {
-    newsButton.addEventListener('click', function (e) {
-      e.preventDefault()
-      centerContainer.classList.add('fade-out')
-      centerContainer.addEventListener(
-        'transitionend',
-        function () {
-          const currentTime = bgVideo.currentTime
-          window.location.href = `events.html?time=${currentTime}`
-        },
-        { once: true }
-      )
-    })
-  }
-})
+  overlay.addEventListener("transitionend", function () {
+    overlay.style.display = "none";
+  });
+});

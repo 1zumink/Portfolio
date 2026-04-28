@@ -1,20 +1,20 @@
-// анимации при переходе страниуц
-window.addEventListener('load', function () {
-  document.body.classList.add('fade-in')
-})
+// Анимация при переходе между страницами.
+window.addEventListener("load", function () {
+  document.body.classList.add("fade-in");
+});
 
-document.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', function (e) {
-    const href = link.getAttribute('href')
+document.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    const href = link.getAttribute("href");
 
-    if (href && !href.startsWith('#') && !link.target) {
-      e.preventDefault()
-      document.body.classList.remove('fade-in')
-      document.body.classList.add('fade-out')
+    if (href && !href.startsWith("#") && !link.target) {
+      e.preventDefault();
+      document.body.classList.remove("fade-in");
+      document.body.classList.add("fade-out");
 
       setTimeout(() => {
-        window.location.href = href
-      }, 800)
+        window.location.href = href;
+      }, 800);
     }
-  })
-})
+  });
+});

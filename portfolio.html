@@ -1,50 +1,148 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DESIGN</title>
-
+    <title>Портфолио — Илья Ланг</title>
     <link rel="stylesheet" href="stylesheets/reset.css" />
+    <link rel="stylesheet" href="stylesheets/system.css" />
     <link rel="stylesheet" href="stylesheets/portfolio.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <section class="topper">
-      <div class="topper-inner">
-        <a href="index.html">MAIN</a>
-        <a href="">ABOUT ME</a>
-        <a href="">SHOP</a>
-        <a href="">FREELANCE</a>
-      </div>
-    </section>
-    <section class="theme">
-      <div class="theme_select">
-        <p class="text_big">PORTFOLIO</p>
-        <nav>
-          <ul>
-            <li><a href="design.html">MULTIDISCIPLINARY DESIGN</a></li>
-            <li>
-              <a href="">PHOTOGRAPHY <span>(coming soon)</span></a>
-            </li>
-            <li>
-              <a href="">CLOTH DESIGN <span>(coming soon)</span></a>
-            </li>
-            <li>
-              <a href="">MODELING <span>(coming soon)</span></a>
-            </li>
-            <li>
-              <a href="">SOUND ENGINEERING <span>(coming soon)</span></a>
-            </li>
-          </ul>
-        </nav>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a class="brand-link link-transition" href="index.html">
+          <span class="brand-mark">L</span>
+          Илья Ланг
+        </a>
+        <div class="nav-links">
+          <a class="is-active" href="portfolio.html">Portfolio</a>
+          <a href="cv.html">CV</a>
+          <a href="about.html">About</a>
+          <a href="shop.html">Shop</a>
+          <a href="freelance.html">Freelance</a>
+        </div>
+      </nav>
+    </header>
 
-        <div><a class="back" href="index.html">BACK TO MAIN</a></div>
+    <main>
+      <section class="page-section hero-section">
+        <div class="page-shell">
+          <p class="page-kicker">specialties / cases / archive</p>
+          <h1 class="page-title">Portfolio <span>system</span></h1>
+          <p class="lead">
+            Портфолио собрано как карта практик: дизайн, фотография, кастом
+            одежды, моделинг и звук. В каждом направлении — кейсы, процесс и
+            результат.
+          </p>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="page-shell">
+          <div class="section-head">
+            <h2 class="section-title">Specialties</h2>
+            <p class="section-copy">
+              Я работаю на стыке визуального языка, персонального стиля и
+              коммерческой задачи. Главный фокус — делать проекты, которые можно
+              не только красиво показать, но и использовать.
+            </p>
+          </div>
+
+          <div class="specialty-grid">
+            <a class="specialty-card surface" href="design.html">
+              <span class="card-index">01</span>
+              <h3>Multidisciplinary design</h3>
+              <p>
+                Айдентика, интерфейсы, кампейны, постеры и визуальные системы
+                для брендов, событий и авторских проектов.
+              </p>
+              <span class="card-action">Открыть кейсы</span>
+            </a>
+
+            <a
+              class="specialty-card surface"
+              href="#photography"
+              id="photography"
+            >
+              <span class="card-index">02</span>
+              <h3>Photography</h3>
+              <p>
+                Образы, предметка, лайфстайл и съемки, где важны атмосфера,
+                композиция и точная визуальная интонация.
+              </p>
+              <span class="card-action">Скоро в архиве</span>
+            </a>
+
+            <a class="specialty-card surface" href="#cloth" id="cloth">
+              <span class="card-index">03</span>
+              <h3>Cloth customization</h3>
+              <p>
+                Кастомные вещи, ручная доработка, единичные дропы и визуальные
+                объекты, которые можно носить.
+              </p>
+              <span class="card-action">Смотреть shop</span>
+            </a>
+
+            <a class="specialty-card surface" href="#modeling" id="modeling">
+              <span class="card-index">04</span>
+              <h3>Modeling</h3>
+              <p>
+                Работа с образом в кадре: силуэт, пластика, позинг и связь
+                одежды с визуальной историей.
+              </p>
+              <span class="card-action">Скоро</span>
+            </a>
+
+            <a class="specialty-card surface" href="#sound" id="sound">
+              <span class="card-index">05</span>
+              <h3>Sound engineering</h3>
+              <p>
+                Звук как часть бренда: атмосферы, короткие sonic-id, обработка и
+                сопровождение визуальных материалов.
+              </p>
+              <span class="card-action">Скоро</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="page-shell">
+          <div class="section-head">
+            <h2 class="section-title">Selected cases</h2>
+            <p class="section-copy">
+              Сейчас в открытом виде собран первый кейс. Остальные направления
+              уже размечены, чтобы сайт легко расширялся новыми проектами.
+            </p>
+          </div>
+
+          <div class="case-strip">
+            <a class="case-preview surface" href="case-gorki.html">
+              <img
+                src="images/projects/gorki/cover.jpg"
+                alt="Обложка кейса Gorki"
+              />
+              <div class="case-preview-text">
+                <p class="page-kicker">identity / visual direction</p>
+                <h3>Gorki</h3>
+                <p>
+                  Визуальный кейс с акцентом на графический ритм, темную среду и
+                  контрастный авторский образ.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© Илья Ланг</p>
+        <a class="chip-link" href="freelance.html">Запросить проект</a>
       </div>
-    </section>
+    </footer>
 
     <script src="./scripts/transition.js"></script>
   </body>
