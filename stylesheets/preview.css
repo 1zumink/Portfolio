@@ -222,7 +222,7 @@
 }
 
 .home-nav a::after {
-  content: "+";
+  content: '→';
   color: var(--cyan);
 }
 
