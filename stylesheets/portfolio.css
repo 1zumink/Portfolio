@@ -1,6 +1,6 @@
 .hero-section {
   position: relative;
-  min-height: clamp(480px, 74vh, 780px);
+  min-height: 74vh;
   display: flex;
   align-items: end;
   overflow: hidden;
@@ -33,8 +33,8 @@
 }
 
 .compact-section {
-  padding-top: clamp(44px, 6vw, 72px);
-  padding-bottom: clamp(44px, 6vw, 72px);
+  padding-top: 6vh;
+  padding-bottom: 6vh;
 }
 
 .specialty-grid {
@@ -44,7 +44,7 @@
 }
 
 .specialty-card {
-  min-height: 320px;
+  min-height: 34vh;
   grid-column: span 2;
   display: flex;
   flex-direction: column;
@@ -64,6 +64,9 @@
 .specialty-card:hover,
 .project-card:hover,
 .case-preview:hover,
+.quick-case:hover,
+.contact-card:hover,
+.discipline-panel:hover,
 .price-card:hover,
 .shop-card:hover {
   transform: translateY(-5px);
@@ -106,11 +109,11 @@
 
 .case-strip {
   display: grid;
-  gap: 18px;
+  gap: 2vh;
 }
 
 .case-preview {
-  min-height: 420px;
+  min-height: 46vh;
   display: grid;
   grid-template-columns: minmax(260px, 0.78fr) minmax(280px, 1fr);
   align-items: stretch;
@@ -122,7 +125,7 @@
 .case-preview img {
   width: 100%;
   height: 100%;
-  min-height: 420px;
+  min-height: 46vh;
   object-fit: cover;
   filter: grayscale(1) contrast(1.08);
 }
@@ -150,14 +153,47 @@
   line-height: 1.5;
 }
 
+.quick-case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2vh;
+}
+
+.quick-case {
+  min-height: 18vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2vw;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.quick-case span {
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.quick-case strong {
+  color: var(--text);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 2vh;
 }
 
 .project-card {
-  min-height: 440px;
+  min-height: 48vh;
   display: grid;
   grid-template-columns: minmax(190px, 0.58fr) minmax(250px, 1fr);
   gap: clamp(18px, 3vw, 34px);
@@ -309,7 +345,7 @@
 }
 
 .process-card {
-  min-height: 230px;
+  min-height: 24vh;
   padding: clamp(18px, 2.4vw, 30px);
 }
 
@@ -343,8 +379,8 @@
 
 .cv-layout {
   display: grid;
-  grid-template-columns: minmax(240px, 0.34fr) minmax(320px, 1fr);
-  gap: clamp(28px, 6vw, 80px);
+  grid-template-columns: minmax(220px, 20vw) minmax(0, 1fr);
+  gap: 4vw;
   align-items: start;
 }
 
@@ -399,8 +435,8 @@
 
 .timeline article {
   display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
-  gap: 24px;
+  grid-template-columns: minmax(96px, 9vw) minmax(0, 1fr);
+  gap: 2vw;
 }
 
 .timeline span {
@@ -420,6 +456,7 @@
 .timeline p,
 .skill-columns li {
   margin-top: 10px;
+  max-width: 78ch;
   color: var(--muted);
   font-size: 16px;
   line-height: 1.5;
@@ -488,7 +525,7 @@
 }
 
 .shop-card {
-  min-height: 520px;
+  min-height: 58vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -499,7 +536,7 @@
 }
 
 .shop-visual {
-  min-height: 260px;
+  min-height: 30vh;
   display: grid;
   place-items: center;
   border: 1px solid var(--line);
@@ -549,8 +586,8 @@
 }
 
 .price-card {
-  min-height: 260px;
-  padding: clamp(18px, 2.4vw, 30px);
+  min-height: 30vh;
+  padding: 2vw;
   transition:
     transform 0.22s ease,
     border-color 0.22s ease;
@@ -628,6 +665,139 @@
   line-height: 1.65;
 }
 
+.contacts-hero::after {
+  content: "CONTACT";
+}
+
+.photography-hero::after {
+  content: "PHOTO";
+}
+
+.custom-hero::after {
+  content: "CUSTOM";
+}
+
+.modeling-hero::after {
+  content: "MODEL";
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2vh;
+}
+
+.contact-card {
+  min-height: 34vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2vw;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.contact-card span,
+.discipline-panel span {
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-card strong {
+  margin-top: auto;
+  color: var(--text);
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.contact-card p {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.discipline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2vh;
+}
+
+.discipline-panel {
+  min-height: 34vh;
+  padding: 2vw;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.discipline-panel h2 {
+  margin-top: 5vh;
+  color: var(--text);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.discipline-panel p {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.custom-process {
+  min-height: 34vh;
+  padding: 3vw;
+}
+
+.custom-process h2 {
+  color: var(--text);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.custom-process p:last-child {
+  max-width: 82ch;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.modeling-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.48fr) minmax(0, 1fr);
+  gap: 4vw;
+  align-items: center;
+}
+
+.modeling-media {
+  min-height: 62vh;
+}
+
+.modeling-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 62vh;
+  object-fit: cover;
+  filter: grayscale(1) brightness(0.72) contrast(1.1);
+}
+
+.modeling-copy {
+  display: grid;
+  gap: 24px;
+}
+
 @media (max-width: 980px) {
   .hero-section::after {
     font-size: 220px;
@@ -662,6 +832,8 @@
   }
 
   .timeline h3,
+  .quick-case strong,
+  .discipline-panel h2,
   .price-card h3,
   .contract-text h2 {
     font-size: 24px;
@@ -673,6 +845,9 @@
 
   .specialty-grid,
   .projects-grid,
+  .quick-case-grid,
+  .contact-grid,
+  .discipline-grid,
   .pricing-grid,
   .shop-grid,
   .case-gallery {
@@ -693,6 +868,7 @@
   .project-card,
   .cv-layout,
   .story-grid,
+  .modeling-layout,
   .contract-layout {
     grid-template-columns: 1fr;
   }
@@ -709,6 +885,19 @@
   .shop-card {
     min-height: auto;
     gap: 24px;
+  }
+
+  .contact-card,
+  .discipline-panel,
+  .quick-case,
+  .custom-process {
+    min-height: auto;
+    padding: 6vw;
+  }
+
+  .modeling-media,
+  .modeling-media img {
+    min-height: 52vh;
   }
 }
 
@@ -736,7 +925,8 @@
 
   .specialty-card h3,
   .process-card h3,
-  .shop-card h2 {
+  .shop-card h2,
+  .custom-process h2 {
     font-size: 26px;
   }
 

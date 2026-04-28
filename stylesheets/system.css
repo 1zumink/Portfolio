@@ -12,8 +12,8 @@
   --text: rgba(223, 255, 253, 0.96);
   --muted: rgba(223, 255, 253, 0.62);
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.48);
-  --max: 1180px;
-  --pad: clamp(18px, 4vw, 54px);
+  --max: 88vw;
+  --pad: 5vw;
   --radius: 8px;
 }
 
@@ -89,13 +89,13 @@ video {
 }
 
 .site-nav {
-  width: min(var(--max), calc(100vw - var(--pad) * 2));
-  min-height: 72px;
+  width: var(--max);
+  min-height: 9vh;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 2vw;
 }
 
 .brand-link {
@@ -124,7 +124,7 @@ video {
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 0.8vw;
 }
 
 .nav-links a,
@@ -156,12 +156,12 @@ video {
 }
 
 .page-shell {
-  width: min(var(--max), calc(100vw - var(--pad) * 2));
+  width: var(--max);
   margin: 0 auto;
 }
 
 .page-section {
-  padding: clamp(58px, 9vw, 110px) 0;
+  padding: 9vh 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -342,7 +342,7 @@ video {
 }
 
 .footer-inner {
-  width: min(var(--max), calc(100vw - var(--pad) * 2));
+  width: var(--max);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -356,13 +356,15 @@ video {
 @media (max-width: 860px) {
   .site-nav {
     min-height: auto;
-    padding: 16px 0;
+    width: 90vw;
+    padding: 2vh 0;
     align-items: flex-start;
     flex-direction: column;
   }
 
   .nav-links {
     justify-content: flex-start;
+    gap: 1vh 2vw;
   }
 
   .section-head,
@@ -373,14 +375,14 @@ video {
 
   .page-title {
     font-size: 74px;
-    width: calc(100vw - var(--pad) * 2);
-    max-width: calc(100vw - var(--pad) * 2);
+    width: 90vw;
+    max-width: 90vw;
   }
 
   .lead {
     font-size: 19px;
-    width: calc(100vw - var(--pad) * 2);
-    max-width: calc(100vw - var(--pad) * 2);
+    width: 90vw;
+    max-width: 90vw;
   }
 
   .section-title {
@@ -389,8 +391,8 @@ video {
 
   .section-copy {
     font-size: 17px;
-    width: calc(100vw - var(--pad) * 2);
-    max-width: calc(100vw - var(--pad) * 2);
+    width: 90vw;
+    max-width: 90vw;
   }
 
   .metric {
@@ -399,6 +401,14 @@ video {
 }
 
 @media (max-width: 560px) {
+  .site-nav,
+  .page-shell,
+  .footer-inner {
+    width: min(82vw, 320px);
+    margin-right: auto;
+    margin-left: 7.5vw;
+  }
+
   .nav-links a,
   .chip-link {
     font-size: 12px;
@@ -411,8 +421,9 @@ video {
 
   .lead,
   .section-copy {
-    width: auto;
-    max-width: 30ch;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   .button-row {
